@@ -1,10 +1,10 @@
-<?php
+<?php namespace Controller\Admin;
 
-class CodeController extends BaseController {
+class CodesController extends AdminBaseController {
 
     public function index()
     {
-
+        return \View::make('admin.codes.index');
     }
 
     public function create()

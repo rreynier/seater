@@ -2,7 +2,7 @@
   <span class="error">Username or password incorrect.</span>
 @endif
 
-{{ Form::open(array('route' => 'session.store')) }}
+{{ Form::open(array('route' => 'sessions.store')) }}
 
     <p>{{ Form::label('email', 'Email') }}
     {{ Form::text('email') }}</p>

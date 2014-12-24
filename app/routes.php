@@ -11,27 +11,24 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'SeatsController@index');
 
 Route::get('login', array(
-    'uses' => 'SessionController@create',
-    'as' => 'session.create'
+    'uses' => 'SessionsController@create',
+    'as' => 'sessions.create'
 ));
 
 Route::post('login', array(
-    'uses' => 'SessionController@store',
-    'as' => 'session.store'
+    'uses' => 'SessionsController@store',
+    'as' => 'sessions.store'
 ));
 
 Route::get('logout', array(
-    'uses' => 'SessionController@destroy',
-    'as' => 'session.destroy'
+    'uses' => 'SessionsController@destroy',
+    'as' => 'sessions.destroy'
 ));
 
-Route::group(array('before' => 'auth'), function() {
-    Route::resource('code', 'CodeController');
+Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
+    Route::resource('codes', 'Controller\\Admin\\CodesController@index');
 });
 

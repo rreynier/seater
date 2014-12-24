@@ -1,10 +1,10 @@
 <?php
 
-class SessionController extends BaseController {
+class SessionsController extends BaseController {
 
     public function create()
     {
-        return View::make('session.create');
+        return View::make('sessions.create');
     }
 
     public function store()
@@ -19,7 +19,7 @@ class SessionController extends BaseController {
             return Redirect::intended('/');
         }
 
-        return Redirect::route('session.create')
+        return Redirect::route('sessions.create')
             ->withInput()
             ->with('login_errors', true);
     }
