@@ -14,8 +14,9 @@ class SessionsController extends BaseController {
             'password' => Input::get('password')
         );
 
+        $user = User::where('email', Input::get('email'))->first();
 
-        if (Auth::attempt($user_data)) {
+        if (Auth::attempt($user_data) && $user->role === 'admin') {
             return Redirect::intended('/');
         }
 
