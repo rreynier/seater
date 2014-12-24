@@ -35,8 +35,8 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Seats</a></li>
-                        <li><a href="#">Codes</a></li>
+                        <li class="{{ set_active('admin/seats') }}"><a href="/admin/seats">Seats</a></li>
+                        <li class="{{ set_active('admin/codes') }}"><a href="/admin/codes">Codes</a></li>
                     </ul>
                 </div>
             </div>
