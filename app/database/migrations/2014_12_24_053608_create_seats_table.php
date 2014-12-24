@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCodesTable extends Migration {
+class CreateSeatsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,13 @@ class CreateCodesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('codes', function(Blueprint $table) {
+		Schema::create('seats', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('code');
-			$table->string('email');
+			$table->integer('user_id');
+			$table->integer('code_id');
+			$table->string('row');
+			$table->string('number');
+			$table->dateTime('claimed_at');
 			$table->timestamps();
 		});
 	}
@@ -27,7 +30,7 @@ class CreateCodesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('codes');
+		Schema::drop('seats');
 	}
 
 }

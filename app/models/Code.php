@@ -26,5 +26,10 @@ class Code extends Eloquent
         });
     }
 
+    public function seat()
+    {
+        return $this->hasOne('Seat');
+    }
+
 
 }

@@ -17,7 +17,6 @@ class CodesController extends AdminBaseController {
 
     public function store()
     {
-
         $validator = \Validator::make(\Input::all(), array(
             'email' => 'required|email|unique:users'
         ));
