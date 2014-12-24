@@ -13,6 +13,8 @@
 
 Route::get('/', 'SeatsController@index');
 
+Route::post('/seats/reserve', 'SeatsController@reserveSeat');
+
 Route::get('login', array(
     'uses' => 'SessionsController@create',
     'as' => 'sessions.create'

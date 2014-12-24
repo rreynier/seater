@@ -27,7 +27,7 @@
                         <td>{{ $seat->id }}</td>
                         <td>{{ $seat->number }}</td>
                         <td>{{ $seat->row }}</td>
-                        <td>{{ $seat->claimed_at ? $seat->claimed_at : 'n/a' }}</td>
+                        <td>{{ $seat->code ? $seat->claimed_at : 'n/a' }}</td>
                         <td>{{ $seat->code ? $seat->code->code : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->first_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->last_name : 'n/a' }}</td>

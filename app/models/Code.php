@@ -31,5 +31,10 @@ class Code extends Eloquent
         return $this->hasOne('Seat');
     }
 
+    public function isClaimed()
+    {
+        return $this->seat ? true : false;
+    }
+
 
 }
