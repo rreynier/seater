@@ -3,11 +3,6 @@
 class AdminBaseController extends \Controller {
 
     /**
-     * The layout that should be used for responses.
-     */
-    protected $layout = 'admin.layouts.master';
-
-    /**
      * Setup the layout used by the controller.
      *
      * @return void
