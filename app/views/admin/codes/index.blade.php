@@ -10,7 +10,7 @@
             <p><a class="btn btn-primary" href="/admin/codes/create" role="button">Create</a></p>
 
             @if(count($codes) > 0)
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered" data-toggle="table">
                 <thead>
                     <tr>
                         <td>ID</td>
@@ -32,8 +32,6 @@
                                 {{ Form::hidden('_method', 'DELETE') }}
                                 {{ Form::submit('Delete', array('class' => 'btn btn-xs btn-warning')) }}
                             {{ Form::close() }}
-                            <!--<a class="btn btn-small btn-success" href="{{ URL::to('nerds/' . $code->id) }}">Show</a>
-                             <a class="btn btn-small btn-info" href="{{ URL::to('nerds/' . $code->id . '/edit') }}">Edit</a> -->
                         </td>
                     </tr>
                 @endforeach

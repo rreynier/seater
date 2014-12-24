@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Seater Admin</title>
         <link href="/assets/vendor/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/vendor/bootstrap-table-1.5.0/bootstrap-table.min.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +49,8 @@
 
         <script src="/assets/vendor/jquery-1.11.2/jquery.min.js"></script>
         <script src="/assets/vendor/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+        <script src="/assets/vendor/bootstrap-table-1.5.0/bootstrap-table.min.js"></script>
+        <!-- <script src="/assets/vendor/bootstrap-table-1.5.0/bootstrap-table-export.js"></script> -->
         <script src="/assets/admin/js/master.js"></script>
     </body>
 </html>
