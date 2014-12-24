@@ -29,6 +29,6 @@ Route::get('logout', array(
 ));
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
-    Route::resource('codes', 'Controller\\Admin\\CodesController@index');
+    Route::resource('codes', 'Controller\\Admin\\CodesController');
 });
 

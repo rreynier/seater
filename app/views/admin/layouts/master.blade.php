@@ -18,14 +18,14 @@
 
     <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse"
-                    data-target="#navbar"
-                    aria-expanded="false"
-                    aria-controls="navbar">
+                        data-toggle="collapse"
+                        data-target="#navbar"
+                        aria-expanded="false"
+                        aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -43,10 +43,11 @@
         </nav>
 
         <div class="container-fluid">
-            yield('content')
+            @yield('content')
         </div>
 
         <script src="/assets/vendor/jquery-1.11.2/jquery.min.js"></script>
         <script src="/assets/vendor/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+        <script src="/assets/admin/js/master.js"></script>
     </body>
 </html>
