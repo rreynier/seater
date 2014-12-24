@@ -9,9 +9,10 @@
                     <li class="seat-{{ $seat->number }} row-{{ $row }}-seat-{{ $seat->number }}">
                         {{ $seat->number }}
                         @if($seat->user)
-                            claimed
+                            claimed by {{ $seat->user->first_name }} {{ $seat->user->last_name }}
                         @else
-                            unclaimed
+                            unclaimed |
+                            <a href="#">claim with code</a>
                         @endif
                     </li>
                 @endforeach
