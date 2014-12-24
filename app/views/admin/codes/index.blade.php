@@ -7,6 +7,8 @@
 
             <h1 class="page-header">Codes</h1>
 
+            <p><a class="btn btn-primary" href="/admin/codes/create" role="button">Create</a></p>
+
             @if(count($codes) > 0)
             <table class="table table-striped table-bordered">
                 <thead>
