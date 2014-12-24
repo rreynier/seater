@@ -1,0 +1,47 @@
+.seatSection {
+    display: table;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.seatRow {
+    display: table-cell;
+    text-align: center;
+}
+.seatRow:nth-child(even) {
+    padding-right: 30px;
+}
+.seatRow:nth-child(odd) {
+    padding-right: 8px;
+}
+.seatRow:nth-child(10) {
+    padding-right: 100px;
+}
+.seatRow:last-child {
+    padding-right: 0;
+}
+.seatRowTitle {
+    font-weight: bold;
+    padding: 4px;
+}
+
+.seat {
+    margin-bottom: 8px;
+}
+.seat a {
+    background: #c5e8eb;
+    border-radius: 6px;
+    color: #000;
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    width: 40px;
+}
+.seat a:hover {
+    background: #444;
+    color: #fff;
+}
+.seat a.reserved {
+    background: #ccc;
+    color: #777;
+}
