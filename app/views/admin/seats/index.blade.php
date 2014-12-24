@@ -19,6 +19,7 @@
                         <td>First Name</td>
                         <td>Last Name</td>
                         <td>Email</td>
+                        <td>Phone</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,7 @@
                         <td>{{ $seat->user ? $seat->user->first_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->last_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->email : 'n/a' }}</td>
+                        <td>{{ $seat->user ? $seat->user->phone : 'n/a' }}</td>
                     </tr>
                 @endforeach
                 </tbody>
