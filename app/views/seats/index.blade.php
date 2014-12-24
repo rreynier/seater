@@ -8,7 +8,7 @@
             @foreach($seats as $seat)
                 <div class="seat seat-{{ $seat->number }} row-{{ $row }}-seat-{{ $seat->number }}">
                     @if($seat->user)
-                        <a href="javascript:;" class="reserved" title="{{ $seat->user->first_name }} {{ $seat->user->last_name }}" data-toggle="tooltip">{{ $row . $seat->number }}</a>
+                        <a href="javascript:;" class="reserved" title="{{ $seat->user->getPrivateName() }}" data-toggle="tooltip">{{ $row . $seat->number }}</a>
                     @else
                         <a href="javascript:;" class="reserveSeat">{{ $row . $seat->number }}</a>
                     @endif

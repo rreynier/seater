@@ -25,4 +25,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $fillable = array('first_name', 'last_name', 'email', 'phone');
 
+	function getAbbreviatedLastName()
+	{
+		return $this->last_name[0] . '.';
+	}
+
+	function getPrivateName()
+	{
+		return ucwords("{$this->first_name} {$this->getAbbreviatedLastName()}");
+	}
+
 }
