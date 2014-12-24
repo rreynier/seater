@@ -23,7 +23,7 @@
                 </thead>
                 <tbody>
                 @foreach($seats as $key => $seat)
-                    <tr>
+                    <tr class="{{ $seat->code ? 'success' : 'warning' }}">
                         <td>{{ $seat->id }}</td>
                         <td>{{ $seat->number }}</td>
                         <td>{{ $seat->row }}</td>
@@ -32,7 +32,6 @@
                         <td>{{ $seat->user ? $seat->user->first_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->last_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->email : 'n/a' }}</td>
-
                     </tr>
                 @endforeach
                 </tbody>

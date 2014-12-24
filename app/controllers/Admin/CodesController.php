@@ -4,7 +4,7 @@ class CodesController extends AdminBaseController {
 
     public function index()
     {
-        $codes = \Code::all();
+        $codes = \Code::orderBy('created_at', 'desc')->with('Seat')->get();
 
         return \View::make('admin.codes.index')
             ->with('codes', $codes);

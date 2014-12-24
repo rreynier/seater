@@ -17,6 +17,7 @@
                         <td>Code</td>
                         <td>Email</td>
                         <td>Created At</td>
+                        <td>Claimed</td>
                         <td>Actions</td>
                     </tr>
                 </thead>
@@ -27,6 +28,7 @@
                         <td>{{ $code->code }}</td>
                         <td>{{ $code->email }}</td>
                         <td>{{ $code->created_at }}</td>
+                        <td class="{{ $code->isClaimed() ? "success" : "warning" }}">{{ $code->isClaimed() ? "yes" : "no" }}</td>
                         <td>
                             {{ Form::open(array('url' => 'admin/codes/' . $code->id, 'class' => 'pull-left confirm-destroy-js')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
