@@ -29,6 +29,7 @@ class CodesController extends AdminBaseController {
         } else {
             $code = new \Code;
             $code->email = \Input::get('email');
+            $code->code = \Input::get('code');
             $code->save();
 
             \Session::flash('message', 'Successfully created a Code!');
