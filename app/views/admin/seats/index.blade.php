@@ -20,6 +20,7 @@
                         <td>Last Name</td>
                         <td>Email</td>
                         <td>Phone</td>
+                        <td>Action</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,13 @@
                         <td>{{ $seat->user ? $seat->user->last_name : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->email : 'n/a' }}</td>
                         <td>{{ $seat->user ? $seat->user->phone : 'n/a' }}</td>
+                        <td>
+                            @if($seat->code)
+                                {{ Form::open(array('url' => 'admin/seats/unreserve/' . $seat->id, 'class' => 'pull-left confirm-destroy-js')) }}
+                                    {{ Form::submit('Unreserve', array('class' => 'btn btn-xs btn-warning')) }}
+                                {{ Form::close() }}
+                            @endif
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

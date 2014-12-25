@@ -30,10 +30,12 @@
                         <td>{{ $code->created_at }}</td>
                         <td class="{{ $code->isClaimed() ? "success" : "warning" }}">{{ $code->isClaimed() ? "yes" : "no" }}</td>
                         <td>
-                            {{ Form::open(array('url' => 'admin/codes/' . $code->id, 'class' => 'pull-left confirm-destroy-js')) }}
-                                {{ Form::hidden('_method', 'DELETE') }}
-                                {{ Form::submit('Delete', array('class' => 'btn btn-xs btn-warning')) }}
-                            {{ Form::close() }}
+                            @if(! $code->isClaimed())
+                                {{ Form::open(array('url' => 'admin/codes/' . $code->id, 'class' => 'pull-left confirm-destroy-js')) }}
+                                    {{ Form::hidden('_method', 'DELETE') }}
+                                    {{ Form::submit('Delete', array('class' => 'btn btn-xs btn-warning')) }}
+                                {{ Form::close() }}
+                            @endif
                         </td>
                     </tr>
                 @endforeach

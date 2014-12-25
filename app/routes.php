@@ -32,6 +32,7 @@ Route::get('logout', array(
 
 Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
     Route::get('/', 'Controller\\Admin\\SeatsController@index');
+    Route::post('/seats/unreserve/{id}', 'Controller\\Admin\\SeatsController@unreserveSeat');
     Route::resource('codes', 'Controller\\Admin\\CodesController');
     Route::resource('seats', 'Controller\\Admin\\SeatsController');
 });
