@@ -10,6 +10,8 @@ class Seat extends Eloquent
      */
     protected $table = 'seats';
 
+    protected $fillable = array('row', 'number');
+
     public function user()
     {
         return $this->belongsTo('User');
