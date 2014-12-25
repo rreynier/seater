@@ -10,15 +10,15 @@
             <p><a class="btn btn-primary" href="/admin/codes/create" role="button">Create</a></p>
 
             @if(count($codes) > 0)
-            <table class="table table-striped table-bordered" data-toggle="table">
+            <table class="table table-striped table-bordered" data-toggle="table" data-search="true" data-sort-name="id" data-sort-order="desc">
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>Code</td>
-                        <td>Email</td>
-                        <td>Created At</td>
-                        <td>Claimed</td>
-                        <td>Actions</td>
+                        <th data-field="id" data-sortable="true">ID</th>
+                        <th data-field="code" data-sortable="true">Code</th>
+                        <th data-field="email" data-sortable="true">Email</th>
+                        <th data-field="created_at" data-sortable="true">Created At</th>
+                        <th>Claimed</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>

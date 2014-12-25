@@ -8,19 +8,19 @@
             <h1 class="page-header">Seats</h1>
 
             @if(count($seats) > 0)
-            <table class="table table-striped table-bordered" data-toggle="table">
+            <table class="table table-striped table-bordered" data-toggle="table" data-search="true">
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>Number</td>
-                        <td>Row</td>
-                        <td>Claimed At</td>
-                        <td>Code</td>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email</td>
-                        <td>Phone</td>
-                        <td>Action</td>
+                        <th data-field="id" data-sortable="true">ID</th>
+                        <th data-field="number" data-sortable="true">Number</th>
+                        <th data-field="row" data-sortable="true">Row</th>
+                        <th data-field="claimed_at" data-sortable="true">Claimed At</th>
+                        <th data-field="code" data-sortable="true">Code</th>
+                        <th data-field="first_name" data-sortable="true">First Name</th>
+                        <th data-field="last_name" data-sortable="true">Last Name</th>
+                        <th data-field="email" data-sortable="true">Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
