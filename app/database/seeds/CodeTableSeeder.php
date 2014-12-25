@@ -8,11 +8,11 @@ class CodeTableSeeder extends Seeder {
 
         DB::table('codes')->truncate();
 
-        for($i = 0; $i < 100; $i++) {
-            Code::create(array(
-                'email' => $faker->email
-            ));
-        }
+        // for($i = 0; $i < 100; $i++) {
+        //     Code::create(array(
+        //         'email' => $faker->email
+        //     ));
+        // }
 
     }
 
