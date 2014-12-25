@@ -26,10 +26,6 @@
         <script>
         (function(){
             SeatSelector.bindClientEvents();
-
-            $(function(){
-                $('[data-toggle="tooltip"]').tooltip();
-            });
         })();
         </script>
     </body>

@@ -5,22 +5,47 @@ var SeatSelector = (function(){
 
     this.bindClientEvents = function(){
 
+        var self = this;
+
         $( document.body )
             .on('submit', '#reserveForm', function(e){
                 e.preventDefault();
+                var data = $(this).serializeJSON();
                 $.ajax({
                     dataType: "json",
                     type: "POST",
                     url: "/seats/reserve",
-                    data: $(this).serializeJSON()
+                    data: data
                 }).done(function(response){
                     if ( response.success )
                     {
-                        alert("Seat reserved");
+                        var name = data.first_name + ' ' + data.last_name,
+                            privateName = data.first_name + ' ' + data.last_name.substr(0,1) + '.',
+                            seatLabel = $('.seatLabel:first').text();
+
+                        $('.seat-' + data.seat_id).html('<a href="javascript:;" class="reserved" title="' + privateName + '" data-toggle="tooltip">' + seatLabel + '</a>');
+                        $('.personLabel').text(name);
+                        $("#confirmationModal").modal('show');
+                        $('#reserveModal').modal('hide');
+
+                        self.bindToolTips();
                     }
                     else if ( response.error )
                     {
-                        alert( response.error );
+                        var errorCode = response.error;
+                        if ( errorCode === "invalid_code" )
+                        {
+                            $('#code-error').text("The reservation code you provided is invalid.").parent().addClass('has-error');
+                        }
+                        else if ( errorCode === "code_already_claimed" )
+                        {
+                            $('#code-error').text("The reservation code you provided has already been claimed.").parent().addClass('has-error');
+                        }
+                        else if ( errorCode === "seat_already_reserved" )
+                        {
+                            alert("The seat you tried reserving has already been reserved. Press 'OK' to refresh this page and to see the currently available seats.");
+                            window.location.reload();
+                        }
                     }
                     else
                     {
@@ -29,14 +54,28 @@ var SeatSelector = (function(){
                 });
             })
             .on('show.bs.modal', function(e){
-                var $button = $(e.relatedTarget);
-                $('input[name="seat_id"]').val($button.data("seatid"));
-                $('.seatLabel').text($button.data("row") + $button.data("seat"));
+                var data = $(e.relatedTarget).data();
+                if ( data )
+                {
+                    $('input[name="seat_id"]').val(data.seatid);
+                    $('.seatLabel').text(data.row + data.seat);
+                }
             })
             .on('shown.bs.modal', function(){
                 $('input[name="first_name"]').focus();
+            })
+            .on('keydown', 'input', function(e){
+                var $input = $(e.currentTarget);
+                $input.parent().removeClass('has-error');
             });
 
+        self.bindToolTips();
+    };
+
+    this.bindToolTips = function() {
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     };
 
     return this;
