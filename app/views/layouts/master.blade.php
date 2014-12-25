@@ -22,10 +22,15 @@
 
         <script src="/assets/vendor/jquery-1.11.2/jquery.min.js"></script>
         <script src="/assets/vendor/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+        <script src="/assets/js/seat-selector.js"></script>
         <script>
-        $(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+        (function(){
+            SeatSelector.bindClientEvents();
+
+            $(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        })();
         </script>
     </body>
 </html>

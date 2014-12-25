@@ -6,15 +6,55 @@
         <div class="seatRow seatRow-{{ $row }}">
             <div class="seatRowTitle">{{ $row }}</div>
             @foreach($seats as $seat)
-                <div class="seat seat-{{ $seat->number }} row-{{ $row }}-seat-{{ $seat->number }}">
+                <div class="seat seat-{{ $seat->number }}">
                     @if($seat->user)
                         <a href="javascript:;" class="reserved" title="{{ $seat->user->getPrivateName() }}" data-toggle="tooltip">{{ $row . $seat->number }}</a>
                     @else
-                        <a href="javascript:;" class="reserveSeat">{{ $row . $seat->number }}</a>
+                        <a href="#reserveModal" class="reserveSeat" data-toggle="modal" data-seatid="{{ $seat->id }}" data-row="{{ $row }}" data-seat="{{ $seat->number }}">{{ $row . $seat->number }}</a>
                     @endif
                 </div>
             @endforeach
         </div>
     @endforeach
+</div>
+
+<div class="modal fade" id="reserveModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">Reserve Seat <span class="seatLabel"></span></h4>
+            </div>
+            <form id="reserveForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" class="form-control" placeholder="First" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" class="form-control" placeholder="Last" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" class="form-control" placeholder="(555) 345-6789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="code">Reservation Code</label>
+                        <input type="text" name="code" class="form-control" placeholder="123CDEFG" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="seat_id" value="">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Reserve Seat <span class="seatLabel"></span></button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 @stop
