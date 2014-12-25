@@ -1,3 +1,13 @@
+body {
+    padding: 20px;
+}
+
+.seatHeader {
+    margin: 0 auto;
+    text-align: center;
+    width: 840px;
+}
+
 .seatSection {
     display: table;
     margin: 0 auto;
@@ -52,3 +62,6 @@
 .form-group.has-error .help-block {
     display: block;
 }
+
+.blueExample { background: #c5e8eb; color: #000; padding: 4px 6px; border-radius: 6px; }
+.grayExample { background: #ccc; color: #777; padding: 4px 6px; border-radius: 6px; }

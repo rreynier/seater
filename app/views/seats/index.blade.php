@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="seatHeader">
+    <img src="/assets/images/clutchLogo.png" alt="Clutch Gaming Arena">
+    <h3>Clutch Con 2015 - BYOC Seat Reservation</h3>
+    <p>Welcome to the seat reservation system for Clutch Con 2015! Open seats are shown below in <span class="blueExample">blue</span> squares while seats which have been reserved will show as a <span class="grayExample">gray</span> square. Click an open seat and fill out the required information to reserve your spot today!</p>
+</div>
 <div class="seatSection">
     @foreach($rows as $row => $seats)
         <div class="seatRow seatRow-{{ $row }}">
