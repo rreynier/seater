@@ -26,20 +26,20 @@ class SeatTableSeeder extends Seeder {
                     'number' => $number
                 ));
 
-                if(rand(1,6) ==1) {
-                    $user_winner = array_rand($users);
-                    $user = $users[$user_winner];
-                    $seat->user_id = $user->id;
-                    $seat->claimed_at = $faker->dateTime;
-                    unset($users[$user_winner]);
+                // if(rand(1,6) ==1) {
+                //     $user_winner = array_rand($users);
+                //     $user = $users[$user_winner];
+                //     $seat->user_id = $user->id;
+                //     $seat->claimed_at = $faker->dateTime;
+                //     unset($users[$user_winner]);
 
-                    $code_winner = array_rand($codes);
-                    $code = $codes[$code_winner];
-                    $seat->code_id = $code->id;
-                    unset($codes[$code_winner]);
+                //     $code_winner = array_rand($codes);
+                //     $code = $codes[$code_winner];
+                //     $seat->code_id = $code->id;
+                //     unset($codes[$code_winner]);
 
-                    $seat->save();
-                }
+                //     $seat->save();
+                // }
             }
         }
     }
