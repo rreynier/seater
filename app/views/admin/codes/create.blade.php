@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     {{ Form::label('code', 'Code') }}
-                    {{ Form::email('email', Input::old('code'), array('class' => 'form-control')) }}
+                    {{ Form::email('code', Input::old('code'), array('class' => 'form-control')) }}
                 </div>
 
                 {{ Form::submit('Create', array('class' => 'btn btn-primary')) }}
