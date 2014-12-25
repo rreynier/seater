@@ -10,7 +10,7 @@
             <p><a class="btn btn-primary" href="/admin/codes/create" role="button">Create</a></p>
 
             @if(count($codes) > 0)
-            <table class="table table-striped table-bordered" data-toggle="table" data-search="true" data-sort-name="id" data-sort-order="desc">
+            <table class="table table-striped table-bordered" data-toggle="table" data-search="true" data-sort-name="id" data-sort-order="desc" data-show-export="true">
                 <thead>
                     <tr>
                         <th data-field="id" data-sortable="true">ID</th>
@@ -23,12 +23,12 @@
                 </thead>
                 <tbody>
                 @foreach($codes as $key => $code)
-                    <tr>
+                    <tr class="{{ $code->isClaimed() ? "success" : "warning" }}">
                         <td>{{ $code->id }}</td>
                         <td>{{ $code->code }}</td>
                         <td>{{ $code->email }}</td>
                         <td>{{ $code->created_at }}</td>
-                        <td class="{{ $code->isClaimed() ? "success" : "warning" }}">{{ $code->isClaimed() ? "yes" : "no" }}</td>
+                        <td>{{ $code->isClaimed() ? "yes" : "no" }}</td>
                         <td>
                             @if(! $code->isClaimed())
                                 {{ Form::open(array('url' => 'admin/codes/' . $code->id, 'class' => 'pull-left confirm-destroy-js')) }}

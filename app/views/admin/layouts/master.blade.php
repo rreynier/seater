@@ -49,8 +49,11 @@
         </div>
 
         <script src="/assets/vendor/jquery-1.11.2/jquery.min.js"></script>
+        <script src="/assets/vendor/table-export/tableExport.js"></script>
+        <script src="/assets/vendor/jquery-base64/jquery.base64.js"></script>
         <script src="/assets/vendor/bootstrap-3.3.1/js/bootstrap.min.js"></script>
         <script src="/assets/vendor/bootstrap-table-1.5.0/bootstrap-table.min.js"></script>
+        <script src="/assets/vendor/bootstrap-table-1.5.0/bootstrap-table-export.min.js"></script>
         <script src="/assets/admin/js/master.js"></script>
     </body>
 </html>

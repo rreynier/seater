@@ -8,7 +8,7 @@
             <h1 class="page-header">Seats</h1>
 
             @if(count($seats) > 0)
-            <table class="table table-striped table-bordered" data-toggle="table" data-search="true">
+            <table class="table table-striped table-bordered" data-toggle="table" data-search="true" data-show-export="true">
                 <thead>
                     <tr>
                         <th data-field="id" data-sortable="true">ID</th>
