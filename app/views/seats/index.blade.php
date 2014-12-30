@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="seatHeader">
-    <img src="/assets/images/clutchLogo.png" alt="Clutch Gaming Arena">
+    <img src="/assets/images/clutchConLogo.png" alt="Clutch Gaming Arena">
     <h3>Welcome to the seat reservation system for Clutch Con 2015!</h3>
 
     <p>Open seats are shown below in <span class="blueExample">blue</span>
     squares while seats which have been reserved will show as
-    <span class="grayExample">gray</span> squares. Click an open seat and fill out the
+    <span class="redExample">red</span> squares. Click an open seat and fill out the
     required information to reserve your spot today!</p>
 
     <p>Once you purchase your ticket online, wait for your second email "shipping"
@@ -17,7 +17,7 @@
     the code for your second ticket and "3" after the third, etc.</p>
 
     <p>If you haven't picked up your tickets yet,
-    <a href="https://squareup.com/market/clutch-gaming-arena/csgo-tournament">Click Here</a>.</p>
+    <a href="http://mkt.com/clutch-gaming-arena/csgo-tournament">Click Here</a>.</p>
 
 </div>
 <div class="seatSection">
