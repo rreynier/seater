@@ -2,6 +2,11 @@ body {
     padding: 20px;
 }
 
+.leadBanner {
+    width: 1220px;
+    max-width: 100%;
+}
+
 .seatHeader {
     margin: 0 auto;
     text-align: center;

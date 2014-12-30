@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="seatHeader">
-    <img src="/assets/images/clutchConLogo.png" alt="Clutch Gaming Arena">
+    <img src="/assets/images/clutchConLogo.png" alt="Clutch Gaming Arena" class="leadBanner">
     <h3>Welcome to the seat reservation system for Clutch Con 2015!</h3>
 
     <p>Open seats are shown below in <span class="blueExample">blue</span>
