@@ -3,8 +3,22 @@
 @section('content')
 <div class="seatHeader">
     <img src="/assets/images/clutchLogo.png" alt="Clutch Gaming Arena">
-    <h3>Clutch Con 2015 - BYOC Seat Reservation</h3>
-    <p>Welcome to the seat reservation system for Clutch Con 2015! Open seats are shown below in <span class="blueExample">blue</span> squares while seats which have been reserved will show as a <span class="grayExample">gray</span> square. Click an open seat and fill out the required information to reserve your spot today!</p>
+    <h3>Welcome to the seat reservation system for Clutch Con 2015!</h3>
+
+    <p>Open seats are shown below in <span class="blueExample">blue</span>
+    squares while seats which have been reserved will show as
+    <span class="grayExample">gray</span> squares. Click an open seat and fill out the
+    required information to reserve your spot today!</p>
+
+    <p>Once you purchase your ticket online, wait for your second email "shipping"
+    confirmation before accessing the seat reservation system. The "code" needed
+    to select a seat is the "order number" listed in your email ticket confirmation
+    with the number "1" at the end. If you have two or more tickets, add a "2" after
+    the code for your second ticket and "3" after the third, etc.</p>
+
+    <p>If you haven't picked up your tickets yet,
+    <a href="https://squareup.com/market/clutch-gaming-arena/csgo-tournament">Click Here</a>.</p>
+
 </div>
 <div class="seatSection">
     @foreach($rows as $row => $seats)
