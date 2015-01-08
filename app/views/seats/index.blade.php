@@ -1,9 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+
+<div class="leadBanner">
+    <img src="/assets/images/clutchConLogo.png" alt="Clutch Gaming Arena" >
+</div>
+
 <div class="seatHeader">
-    <img src="/assets/images/clutchConLogo.png" alt="Clutch Gaming Arena" class="leadBanner">
-    <h3>Welcome to the seat reservation system for Clutch Con 2015!</h3>
+    <h1>Welcome to the seat reservation system for Clutch Con 2015!</h1>
 
     <p>Open seats are shown below in <span class="blueExample">blue</span>
     squares while seats which have been reserved will show as
@@ -19,7 +23,15 @@
     <p>If you haven't picked up your tickets yet,
     <a href="http://mkt.com/clutch-gaming-arena/csgo-tournament">Click Here</a>.</p>
 
+    <h2>Find your game!</h2>
+    <p>To help you generally sit next to people playing your favorite game, the attached Clutch Con map provides suggested seating areas and examples of popular games in that genre. Of course these are just for general reference and you're welcome to sit wherever you like!</p>
+    <img class="gameLocations" src="/assets/images/gameLocations.jpg" />
+
 </div>
+
+<h2>Pick Your Seat!</h2>
+<h3 class="stage">Main Stage</h3>
+
 <div class="seatSection">
     @foreach($rows as $row => $seats)
         <div class="seatRow seatRow-{{ $row }}">

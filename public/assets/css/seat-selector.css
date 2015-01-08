@@ -1,21 +1,46 @@
 body {
     padding: 20px;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 2.4em;
+    margin: 40px 0 30px;
+}
+
+h2 {
+    font-size: 1.6em;
 }
 
 .leadBanner {
-    width: 1220px;
-    max-width: 100%;
+    background-color: #000;
+    margin: -20px -20px 0 -20px;
+    padding: 20px 0;
+}
+
+.leadBanner img {
+    max-width: 90%;
+}
+
+.gameLocations {
+    width: 200px;
 }
 
 .seatHeader {
     margin: 0 auto;
-    text-align: center;
+    padding: 0 0 20px 0;
+    max-width: 800px;
 }
 
-.seatHeader p {
-    margin-left: auto;
-    margin-right: auto;
-    width: 840px;
+.stage {
+    text-align: center;
+    width: 400px;
+    background-color: #E4E4E4;
+    color: #737373;
+    margin: 20px auto 20px auto;
+    padding: 10px;
 }
 
 .seatSection {
@@ -49,13 +74,13 @@ body {
     margin-bottom: 8px;
 }
 .seat a {
-    background: #c5e8eb;
+    background: #9BDFFF;
     border-radius: 6px;
     color: #000;
     display: block;
-    padding: 8px 0;
+    padding: 8px 8px;
     text-decoration: none;
-    width: 40px;
+    width: 100%;
 }
 .seat a:hover {
     background: #444;
@@ -73,5 +98,57 @@ body {
     display: block;
 }
 
-.blueExample { background: #c5e8eb; color: #000; padding: 4px 6px; border-radius: 6px; }
+.blueExample { background: #9BDFFF; color: #000; padding: 4px 6px; border-radius: 6px; }
 .redExample { background: #f00; color: #fff; padding: 4px 6px; border-radius: 6px; }
+
+@media only screen and (max-width: 1340px) {
+
+    .seat a {
+        padding: 6px;
+        font-size: .8em;
+    }
+
+    .seatRow:nth-child(10) {
+        padding-right: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .seat a {
+        padding: 4px;
+        font-size: .8em;
+    }
+
+    .seatRow:nth-child(10) {
+        padding-right: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 1140px) {
+
+    .seat a {
+        padding: 4px;
+        font-size: .7em;
+    }
+
+    .seatRow:nth-child(10) {
+        padding-right: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .seat a {
+        padding: 8px;
+        font-size: .9em;
+    }
+
+    .seatRow:nth-child(10) {
+        padding-right: 60px;
+    }
+
+}
